@@ -5,7 +5,7 @@ import { Moeda } from '../models';
 @Injectable()
 export class MoedaService {
 
-  private moedas: Moeda[]
+  private moedas: Moeda[];
 
   constructor() {}
 
@@ -46,18 +46,18 @@ export class MoedaService {
 
   listarTodas(): Moeda[] {
   	if (this.moedas) {
-  		return this.moedas
+  		return this.moedas;
   	} 
   	
-  	this.moedas = []
+  	this.moedas = [];
 
   	for (let moedaObj of this.moedasObj) {
-  		let moeda: Moeda = new Moeda()
-  		Object.assign(moeda, moedaObj)
-  		this.moedas.push(moeda)
+  		let moeda: Moeda = new Moeda();
+  		Object.assign(moeda, moedaObj);
+  		this.moedas.push(moeda);
   	}
 
-  	return this.moedas
+  	return this.moedas;
   }
 
 }
